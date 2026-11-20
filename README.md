@@ -5,35 +5,51 @@ This project assists your movie choice by picking randomly movie(s) you've marke
 ## Theoretical basis
 
 The project came to mind exclusively to solve a personal problem with using `watchlistpicker.com`, a direct option towards randomizing choices of a watchlist. For a while now, it has been showing an error when I tried to use my personal (not private) profile, saying `Sorry, that watchlist is empty, private, or doesn't exist at all.`. Then, I decided to give it a try using Python and some things I studied recently.
+
 The first version of this project was made using simple arrays and iterating them using for loops. This first version of the project can still be found in the file `watchlist_array.py`. A note for those that want to run it: As it says in commentaries on the file's code, it shows only the name of the movie(s) you choose to randomize, not the year nor the Letterboxd link.
+
 After concluding the first version of the project, I wanted to try something more. Recently, I have been studying dictionaries and their usage on Python and I had the idea of pairing it with this project. It just made more sense, since I have all the information at the .csv, but I would have to pair each link and year with the name of the said movie. In dictionaries, it is done because every key has its pair on a value. Let's take Harakiri as an example.
 > On the said dictionary,
+> 
 > dictionary_example { 
+> 
 >   [movie_name] = ([year], [link])
+> 
 >   Harakiri = (1962, https://letterboxd.com/film/harakiri/)
+> 
 > }
+
 That way, information could be accessed easily, such as so:
 > dictionary_example[Harakiri][0] = 1962
 > dictionary_example[Harakiri][1] = https://letterboxd.com/film/harakiri/
+
 That way, the title of the movie is synced and paired with the title of that same movie title.
 I had that idea simply because, when shown the results, you would see the difference:
+
 `From the old code`
 > Your movie is Harakiri
+
 `From the new code`
+
 > Your movie is Harakiri (1962) - https://letterboxd.com/film/harakiri/
 
 ## Example of usage
 
 In order to show the usage of this project, you'll notice there's a watchlist.csv. This file is an example of the watchlist.csv you can extract directly from Letterboxd. This example shows the first 100 movies of the official Letterboxd list `Letterboxd’s Top 500 Films`.
 First, I ran the Python file and chose one single movie as a recommendation. And so, I was recommended of `Harakiri (1962) - https://letterboxd.com/film/harakiri/`
+<img width="633" height="57" alt="Captura de tela 2026-11-19 231428" src="https://github.com/user-attachments/assets/a3cc0d9b-3863-4785-97df-b1f77ac8e28b" />
 
 Decided to ask for another movie to showcase the randomization and, this time, got the recommendation of `The Red Shoes (1948) - https://letterboxd.com/film/the-red-shoes/`
+<img width="736" height="58" alt="Captura de tela 2026-11-19 231525" src="https://github.com/user-attachments/assets/ddf5a26e-3aa7-4a2e-9943-5cdf1311f55d" />
 
 Now, to test the multiple recommendations, I asked for five movies out of Letterboxd's list and got the movies below.
+<img width="758" height="197" alt="Captura de tela 2026-11-19 235146" src="https://github.com/user-attachments/assets/ab274313-eed0-47f6-938b-40294d4a1f38" />
 
 When the code asks you `Would you like to sort it out again?`, it's good to remind it is also case-insensitive! Meaning it could answer to `yes`, `yES`, `YES`, `YEs` or `NO`.
+<img width="408" height="270" alt="Captura de tela 2026-11-19 231724" src="https://github.com/user-attachments/assets/84554f84-4ee0-4936-8f3e-4a2fa1bff682" />
 
 Finally, when your recommendation has been complete, the program shuts down and thanks you for utilizing it!
+<img width="405" height="38" alt="Captura de tela 2026-11-19 231756" src="https://github.com/user-attachments/assets/afbac8d9-30b2-43f4-aa6f-b840d336a8f6" />
 
 ## Project structure
 
