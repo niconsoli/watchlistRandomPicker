@@ -46,6 +46,7 @@ Now, to test the multiple recommendations, I asked for five movies out of Letter
 <img width="758" height="197" alt="Captura de tela 2026-11-19 235146" src="https://github.com/user-attachments/assets/ab274313-eed0-47f6-938b-40294d4a1f38" />
 
 When the code asks you `Would you like to sort it out again?`, it's good to remind it is also case-insensitive! Meaning it could answer to `yes`, `yES`, `YES`, `YEs` or `NO`.
+
 <img width="408" height="270" alt="Captura de tela 2026-11-19 231724" src="https://github.com/user-attachments/assets/84554f84-4ee0-4936-8f3e-4a2fa1bff682" />
 
 Finally, when your recommendation has been complete, the program shuts down and thanks you for utilizing it!
